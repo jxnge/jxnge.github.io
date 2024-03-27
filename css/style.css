@@ -1,0 +1,434 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: rgb(26, 27, 29);
+    color: rgb(212, 212, 212);
+    width: 100%;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+}
+
+
+
+    header {
+        position: fixed;
+        padding: 2px 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+        width: 100%;
+        background-color:#000000;
+        height: 12svh;
+        z-index: 2;
+    }
+    
+    .branding{
+        width: 10%;
+        cursor:default;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .branding img{
+        width: 10svh;
+    }
+    
+    .nav{
+        width: 80%;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    
+    #hamburger-icon {
+        margin: auto 0;
+        display: none;
+        cursor: pointer;
+    }
+    
+    #hamburger-icon div {
+    width: 3.5svh;
+    height: 0.3svh;
+    background-color: white;
+    margin: 0.6svh 0;
+    transition: 0.4s;
+    }
+    
+    .open .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-0.6vh, 0.6vh);
+    transform: rotate(-45deg) translate(-0.6vh, 0.6vh);
+    }
+    
+    .open .bar2 {
+    opacity: 0;
+    }
+    
+    .open .bar3 {
+    -webkit-transform: rotate(45deg) translate(-0.6vh, -0.6vh);
+    transform: rotate(45deg) translate(-0.6vh, -0.6vh);
+    }
+    
+    .open .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: fixed;
+    }
+    
+    .mobile-menu {
+    display: none;
+    position: fixed;
+    height: 100dvh;
+    top: 12svh;
+    left: 0;
+    width: 100%;
+    background-color: #000000;
+    list-style: none;
+    }
+
+    .mobile-menu a {
+    text-decoration: none;
+    color: rgb(212, 212, 212);
+    font-size: 7svh;
+    }
+
+    .mobile-menu li{
+        margin-top: 7svh;
+    }
+
+    .pages{
+        width: 67%;
+    }
+    
+    .nav .pages{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .pages ul{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        list-style: none;
+    }
+    
+    header a{
+        text-decoration: none;
+        color: rgb(212, 212, 212);
+        font-size: 2.7svw;
+        font-weight: 600;
+        transition: 0.5s ease-in-out;
+        margin-right: 1svh;
+    }
+    
+    header a:hover{
+        color: limegreen;
+    }
+    
+    main{
+        display: block;
+        width: 100%;
+        padding: 10px;
+    }
+    
+    #home{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100svh;
+    }
+    
+    .context {
+        width: 100%;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    #home h1{
+        width: 80%;
+        padding: 0.5svh;
+        font-size: 10svw;
+        font-weight: 700;
+        margin-bottom: 2.1svh;
+        animation: bounceIn 2s;
+        text-align: center;
+    }
+    
+    #home h2{
+        width: 80%;
+        padding: 0.5svh;
+        font-size: 4svw;
+        font-weight: 500;
+        animation: bounceIn 2s 1s;
+        animation-fill-mode: forwards;
+        opacity: 0;
+        text-align: center;
+    }
+    
+    @keyframes bounceIn {
+        0% {
+          transform: scale(0.1);
+          opacity: 0;
+        }
+        40% {
+          transform: scale(1.2);
+          opacity: 1;
+        }
+        100% {
+          transform: scale(1);
+        opacity: 1;
+        }
+      }
+    
+    #about{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100svh;
+    }
+
+    .section-header{
+        height: 20svh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #about h1, #projects h1, #contact h1{
+        font-size: 12svh;
+        font-weight: 700;
+        color: limegreen;
+        text-align: center;
+    }
+    
+    
+    #about .section-info{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        height: 60svh;
+        padding: 0 10svw;
+    }
+
+    #about i{
+        font-size: 4svw;
+    }
+
+    #about img{
+        width: 30svw;
+        height: auto;
+        width: 30%;
+    }
+
+    .info-text{
+        width: 60%;
+        height: 55vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    } 
+    
+    #about p{
+        font-size: 1.6svw;
+        font-weight: 500;
+        height: 30svh;
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 5svh 0;
+    }
+    
+    .section-info .cvs{
+        width: 100%;
+        height: 30svh;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+    .section-info .cvs a{
+        text-decoration: none;
+        color: limegreen;
+        font-size: 1.8svh;
+        border: 0.3vw solid limegreen;
+        padding: 1.6svh;
+        height: 9vw;
+        width: 9vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .eng{
+        margin-right: 1svh;
+    }
+
+    .pol {
+        margin-left: 1svh;
+    }
+
+    .cvs a:hover{
+        color: white;
+        border: 0.3svw solid red;
+    }
+    
+    .cvs a.eng:hover{
+        color: red;
+        border: 0.3svw solid white;
+    }
+
+
+
+    #projects{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100svh;
+    }
+
+    #projects .section-info{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 60svh;
+    }
+
+    #projects p{
+        font-size: 4.8svh;
+        font-weight: 500;
+        width: 60%;
+        text-align: center;
+        margin-bottom: 3svh;
+    }
+
+    #projects a{
+        font-size: 20svh;
+        text-decoration: none;
+        color: rgb(212, 212, 212);
+        border: 5px solid rgb(212, 212, 212);
+        padding: 2svh;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #projects a:hover{
+        border: 0.6vw solid limegreen;
+        color:limegreen;
+        background-color: #000000;
+    }
+
+    #contact .section-info{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        height: 60svh;
+    }
+
+    #contact{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 80svh;
+        margin-bottom: 5svh;
+    }
+
+    #contact .section-info{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+
+    #contact a{
+        color: limegreen;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        text-decoration: none;
+        border: 0.3svw solid limegreen;
+        padding: 2vh;
+        width: 20%;
+        height: 60svh;
+        font-size: 2.9svw;
+        font-weight: 600;
+    }
+
+    #contact i{
+        font-size: 10svw;
+    }
+
+    #contact .fb:hover{
+        color: white;
+        border-color:white;
+        background-color: #4267B2;
+    }
+
+    #contact .ln:hover{
+        color: white;
+        border-color:white;
+        background-color: #0077B5;
+    }
+
+    #contact .em:hover{
+        color: #ff4343;
+        border-color:#ff4343;
+        background-color: #ece9e9;
+    }
+
+    #contact .ph:hover{
+        color: white;
+        border-color:white;
+        background-color: rgb(38, 155, 38);
+    }
+
+    footer{
+        width: 100%;
+        height: 5svh;
+        background-color: #000000;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        font-weight: 500;
+        font-size: 2.7svh;
+        position: absolute;
+    }
+
